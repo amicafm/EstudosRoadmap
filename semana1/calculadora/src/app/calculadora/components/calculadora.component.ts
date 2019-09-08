@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CalculadoraService } from '../services/calculadora.service';
+
+import { CalculadoraService } from '../services';
 
 @Component({
   selector: 'app-calculadora',
@@ -8,7 +9,6 @@ import { CalculadoraService } from '../services/calculadora.service';
 })
 export class CalculadoraComponent implements OnInit {
 
-  /*PRIVATE NÃO DEIXA OS OUTROS COMPONENTES TEREM ACESSO A ELES ENTAO SÓ SÃO USADOS AQUI*/
   private numero1: string;
   private numero2: string;
   private resultado: number;
@@ -95,5 +95,6 @@ export class CalculadoraComponent implements OnInit {
     }
     return this.numero1;
   }
+
 
 }

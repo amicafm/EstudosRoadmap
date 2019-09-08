@@ -1,22 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CalculadoraComponent } from './components/calculadora.component';
-import { CalculadoraService } from './services/calculadora.service';
-
+import { CalculadoraModule } from './calculadora';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CalculadoraComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpModule,
+    CalculadoraModule
   ],
-  providers: [CalculadoraService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
