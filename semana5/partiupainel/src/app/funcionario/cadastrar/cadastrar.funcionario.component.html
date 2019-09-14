@@ -1,0 +1,62 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<body>
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-11 register-right">
+                <form [formGroup]="formGroup" id="form" novalidate>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading"><a routerLink="/listarfuncionario"><img src="../../../assets/img/seta.png" style="height: 60px; width: 60px; margin-right: 20px;"></a>Cadastre um novo funcionário :)</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" formControlName="nome" placeholder="Nome" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" formControlName="cpf" placeholder="CPF" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" formControlName="usuario" placeholder="Usuário de login" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  formControlName="senha" placeholder="Senha" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="maxl">
+                                            <label class="radio inline"> 
+                                                <input type="radio" name="genero" value="M" formControlName="genero" checked >
+                                                <span> Homem </span> 
+                                            </label>
+                                            <label class="radio inline" style="margin-left: 10px;"> 
+                                                <input type="radio" name="genero" value="F" formControlName="genero">
+                                                <span> Mulher </span> 
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" formControlName="email" placeholder="Email" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="11" name="txtEmpPhone" class="form-control" formControlName="telefone" placeholder="Telefone" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div>
+                                            Nascimento: <input type="date" name="nascimento" formControlName="nascimento">
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 50px;">
+                                        <button type="button" class="btnRegister" (click)="this.adicionarFuncionario()">Cadastrar </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
