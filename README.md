@@ -9,3 +9,7 @@ Semana 3 --> CRUD
 Semana 4 --> Testes unitários
 
 Semana 5 --> Evolução do meu TCC
+
+TOUCHDOWN 4
+
+Semana 6 --> Angular chartsJS
