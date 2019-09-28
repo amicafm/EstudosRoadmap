@@ -1,0 +1,30 @@
+<body>
+    <div class="aqui">
+        <div id="topo">
+            <a routerLink="/mediador" style="justify-content: left;"><img src="../../../assets/img/setab.png" style="height: 60px; width: 60px; margin-right: 20px;"></a>
+            <a style="margin-left: 500px">Seus Funcionários</a>
+        </div>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Nome do item</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col" id="add">
+                        <button type="button" class="btn btn-success" routerLink="/cadastrarcardapio">+ Cadastrar itens</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of listarItems">
+                    <th scope="row">{{item.nome}}</th>
+                    <td>{{item.categoria}}</td>
+                    <td>{{item.valor}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" routerLink="/editarcardapio">Editar</button>
+                        <button type="button" class="btn btn-danger" (click)="excluirItem(item.id)">Deletar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

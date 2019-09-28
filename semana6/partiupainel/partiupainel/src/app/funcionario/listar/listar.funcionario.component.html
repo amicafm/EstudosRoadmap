@@ -1,0 +1,34 @@
+<body>
+    <div class="aqui">
+        <div id="topo"> 
+            <a routerLink="/mediador" style="justify-content: left;"><img src="../../../assets/img/setab.png" style="height: 60px; width: 60px; margin-right: 20px;"></a>
+            <a style="margin-left: 500px">Seus Funcionários</a>
+        </div>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Usuário</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col" id="add">
+                        <button type="button" class="btn btn-success" routerLink="/cadastrarfuncionario">+ Cadastrar Fucinonário</button></th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let funcionario of listarFuncionarios">
+                <tr>
+                    <th scope="row">{{funcionario.nome}}</th>
+                    <td>{{funcionario.cpf}}</td>
+                    <td>{{funcionario.usuario}}</td>
+                    <td>{{funcionario.email}}</td>
+                    <td>{{funcionario.telefone}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" routerLink="/editarfuncionario">Editar</button>
+                        <button type="button" class="btn btn-danger" (click)="excluirFuncionario(funcionario.id)">Deletar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
