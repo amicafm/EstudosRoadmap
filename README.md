@@ -13,3 +13,5 @@ Semana 5 --> Evolução do meu TCC
 TOUCHDOWN 4
 
 Semana 6 --> Angular chartsJS
+
+Semana 7 --> JAVA Graphics
