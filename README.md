@@ -15,3 +15,5 @@ TOUCHDOWN 4
 Semana 6 --> Angular chartsJS
 
 Semana 7 --> JAVA Graphics
+
+Semana 8 --> Python first steps
